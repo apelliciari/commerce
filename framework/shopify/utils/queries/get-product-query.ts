@@ -62,6 +62,15 @@ const getProductQuery = /* GraphQL */ `
           }
         }
       }
+      metafields(namespace: "custom_fields", first: 50) {
+        edges {
+          node {
+            id
+            key
+            value
+          }
+        }
+      }
     }
   }
 `

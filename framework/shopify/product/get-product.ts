@@ -21,7 +21,7 @@ const getProduct = async (options: {
   const { data }: GraphQLFetcherResult = await config.fetch(getProductQuery, {
     variables,
   })
-
+  console.log(data)
   const { productByHandle: product } = data
 
   return {

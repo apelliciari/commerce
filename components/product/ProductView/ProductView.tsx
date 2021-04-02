@@ -29,6 +29,7 @@ const ProductView: FC<Props> = ({ product }) => {
   const [choices, setChoices] = useState<SelectedOptions>({})
 
   useEffect(() => {
+    console.log(product)
     // Selects the default option
     product.variants[0].options?.forEach((v) => {
       setChoices((choices) => ({
